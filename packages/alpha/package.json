@@ -1,19 +1,15 @@
 {
-  "name": "alpha",
+  "name": "@nifanic/alpha",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "nifanic <nifanic@masterpage.net>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/alpha.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
+  "main": "lib/index",
+  "types": "lib/index",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "clean": "rm -rf ./node_modules ./lib tsconfig.tsbuildinfo",
+    "compile": "tsc -b tsconfig.json",
+    "build": "yarn clean && yarn compile"
   }
 }
